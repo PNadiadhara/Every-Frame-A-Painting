@@ -7,14 +7,30 @@ from tkinter import filedialog, test
 # root is used for "frame Work" i.e. html body
 root = tk.Tk()
 
+def addMP4():
+    filename = filedialog.askopenfilename(initialdir="/", title= "Select MP4", 
+    filetypes=(("MP4s", "*.mp4"), ("all files", "*.*")))
+
 
 
 canvas = tk.Canvas(root, height=700, width=700, bg="#263D42")
 # canvas.pack() attaches to root to allow the custom settings i.e. height, width, color
 canvas.pack()
 
+frame = tk.Frame(root, bg="white")
+# relx and rel y "distance from origin" set at top left
+frame.place(relwidth = 0.8, relheight= 0.8, relx=0.1, rely=0.1)
 #root.mainloop used to open gui
 # important note, have root.mainloop last to allow for canvas pack updates to work
+
+# button note: highlightbackground is used to change button bg color on mac, on pc it's bg
+
+selectMP4 = tk.Button(root, text = "Open MP4", padx = 10, pady = 5, fg="white", highlightbackground="#263D42",command = addMP4)
+selectMP4.pack()
+
+runApp = tk.Button(root, text = "runApp", padx = 10, pady = 5, fg="white", highlightbackground="#263D42")
+runApp.pack()
+
 root.mainloop()
 
 
