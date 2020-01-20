@@ -6,10 +6,27 @@ from tkinter import filedialog, test
 
 # root is used for "frame Work" i.e. html body
 root = tk.Tk()
+filePath = []
+
+#check for save file
+if os.path.isfile('save.txt'):
+    with open('save.txt', 'r') as f:
+        tempFile = f.read
+        print(tempFile)
+
 
 def addMP4():
+    for widget in frame.winfo_children() :
+        widget.destroy()
+
     filename = filedialog.askopenfilename(initialdir="/", title= "Select MP4", 
     filetypes=(("MP4s", "*.mp4"), ("all files", "*.*")))
+    filePath.append(filename)
+    print(filename)
+    for file in filePath:
+        label = tk.Label(frame, text = file, bg= "gray")
+        label.pack()
+
 
 
 
@@ -25,13 +42,18 @@ frame.place(relwidth = 0.8, relheight= 0.8, relx=0.1, rely=0.1)
 
 # button note: highlightbackground is used to change button bg color on mac, on pc it's bg
 
-selectMP4 = tk.Button(root, text = "Open MP4", padx = 10, pady = 5, fg="white", highlightbackground="#263D42",command = addMP4)
-selectMP4.pack()
+selectMP4 = tk.Button(root, text = "Open MP4", padx = 10, pady = 5, fg="black", highlightbackground="#263D42",command = addMP4).pack()
+#selectMP4.pack()
 
 runApp = tk.Button(root, text = "runApp", padx = 10, pady = 5, fg="white", highlightbackground="#263D42")
 runApp.pack()
 
 root.mainloop()
+
+# create savefile
+with open('save.txt', "w") as f:
+    for file in filePath:
+        f.write(file + ',')
 
 
 
