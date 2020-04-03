@@ -31,4 +31,4 @@ def extract_frames (mp4_file, frames_folder_path):
         
 
 
-extract_frames(vidcap,path)
+#extract_frames(vidcap,path)
