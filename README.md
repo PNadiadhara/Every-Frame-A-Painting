@@ -1,13 +1,10 @@
-# Every-Frame-A-Painting
-
-
-
 
 # Every Frame A Painting
 
+# Turn this
 ![](CompressedSpideySwing.gif)
 
-
+# Into These!
 ![](demo.gif)
 
 
