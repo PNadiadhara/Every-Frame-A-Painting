@@ -1,7 +1,7 @@
 import cv2
 import os
 
-vidcap = cv2.VideoCapture('Jellyfish.mp4')
+vidcap = cv2.VideoCapture('Swing.mp4')
 path = '/Users/priteshnadiadhara/Documents/Python/EveryFrameAPainting/Frames'
 
 
@@ -25,10 +25,10 @@ def extract_frames (mp4_file, frames_folder_path):
         success,image = vidcap.read()
         print ('Read a new frame: ', success, frame_count)
         
-        if frame_count == 11:
+        if frame_count == 66:
             success = False
     
         
 
 
-#extract_frames(vidcap,path)
+extract_frames(vidcap,path)

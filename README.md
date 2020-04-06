@@ -1,6 +1,8 @@
 
 # Every Frame A Painting
 
+Sometimes a movie or video can be so well crafted that every frame may as well be a painting (Such is the case with Spider-man Into the Spider-Verse). The goal of this project is to be able to admire every frame of a clip and be able to use the images as desktop wallpapers. 
+
 # Turn this
 ![](CompressedSpideySwing.gif)
 
